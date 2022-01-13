@@ -4,12 +4,43 @@ html{
     padding: 0;
 }
 body{
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
+    font-family: 'Montserrat';
+    background-image: linear-gradient(to right, #00C1FE , #FAFFC1);
+}
+.mycontainer{
+    display: flex;
+    justify-content: center;
 }
 .card{
     margin-top: 175px;
-    background: #FFFFFF;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+    width: 475px;
+}
+.ctitle1{
+    margin-top: 44px;
+    margin-left: 66px;
+    padding-left: 12px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: #000000;
+    border-left: 6px solid #00C1FE;
+}
+.ctitile2{
+    margin-top: 43px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+}
+.cpara{
+    margin-top: 9px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center  ;
 }
