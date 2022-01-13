@@ -61,6 +61,10 @@ body{
     text-align: center;
     margin-top: 27px ;
     margin-bottom: 41px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
 }
 .mylink{
     color: #00C1FE;
@@ -79,4 +83,42 @@ body{
     padding-top: 15px;
     padding-bottom: 14px;
     padding-left: 15px;
+}
+.mycontainer2{
+    display: flex;
+}
+.sidebar{
+    background-color: #FAFFC1;
+}
+.dtitle1{
+    margin-top: 18px;
+    margin-left: 37px;
+    margin-right: 147px;
+    padding-left: 12px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    border-left: 6px solid #00C1FE;
+}
+.pimg{
+    border-radius: 50%;
+}
+.profile{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ptitle{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 21px;
+    color: #000000;
+}
+.dlink{
+    text-decoration: none;
+    color: #00C1FE;
 }
