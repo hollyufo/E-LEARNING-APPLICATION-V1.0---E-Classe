@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-html{
+*{
     margin: 0;
     padding: 0;
 }
@@ -121,4 +121,46 @@ body{
 .dlink{
     text-decoration: none;
     color: #00C1FE;
+}
+        
+.sidebar {
+    margin: 0;
+    padding: 0;
+    background: #FAFFC1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+  
+
+div.content {
+    margin-left: 257px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px
+}
+.myspan{
+        margin-left: 19px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+}
+.btn-color2{
+    color: black;
+    width: 80%;
+}
+.btn-active1{
+    background-color: #00C1FE;
+}
+.sbtn{
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-radius: 4px;
+    padding-left: 45px;
 }
