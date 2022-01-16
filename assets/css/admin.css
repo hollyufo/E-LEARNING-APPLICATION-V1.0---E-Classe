@@ -11441,3 +11441,10 @@ line-height: 22px;
 letter-spacing: 0em;
 text-align: right;
 }
+.slink{
+  color: inherit;
+  text-decoration: none;
+}
+.mycontainer2{
+  display: flex;
+}
