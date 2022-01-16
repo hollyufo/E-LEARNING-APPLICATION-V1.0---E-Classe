@@ -11363,7 +11363,7 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 120px;
+  margin-top: 18%;
 }
 .mynav{
   align-items: center;
@@ -11403,6 +11403,13 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 .mypr1{
   align-self: flex-end;
   margin-bottom: 0px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #000000;
 }
 .card{
   min-width: 255px !important;
@@ -11410,24 +11417,13 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 .row{
   margin-top: 30px;
   justify-content: space-evenly;
-}
-@media only screen and (max-width: 1257px) {
-  .card4{
-    margin-top: 20px;
-  }
-}
-@media only screen and (max-width: 995px) {
-  .card3{
-    margin-top: 20px;
-  }
+  column-gap: 10px;
+  row-gap: 20px;
 }
 @media only screen and (max-width: 767px) {
   .ms12{
     max-width: 80%;
     margin-left: 10%;
-  }
-  .card2{
-    margin-top: 20px;
   }
 }
 @media only screen and (max-width: 985px) {
@@ -11435,4 +11431,13 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     flex-direction: row;
     justify-content: center;
   }
+}
+.myspan{
+  font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: right;
 }
