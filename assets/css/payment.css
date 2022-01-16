@@ -1,0 +1,13 @@
+tr:nth-child(even) {
+    background-color: #E5E5E5;
+}
+tr:nth-child(odd) {
+    background: #ffff;
+}
+.table{
+    margin-left: 20px;
+    margin-right: 20px !important;
+}
+.theader1{
+    background-color: #E5E5E5 !important;
+  }
