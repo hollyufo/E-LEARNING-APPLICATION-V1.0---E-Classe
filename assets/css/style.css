@@ -10,6 +10,8 @@ body{
 .mycontainer{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .card{
     margin-top: 175px;
