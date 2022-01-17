@@ -11,3 +11,6 @@
 .mytr{
   background-color: white;
 }
+.res-table{
+  overflow-x:auto;
+}
