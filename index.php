@@ -28,7 +28,7 @@
             </form>
             <p class="cpara2">Forgot your password? <a href="#" class="mylink">Reset Password</a></p>
         </div>
-        <a href="./dashboard.html">dashboard</a> 
+        <a href="./dashboard.php">dashboard</a> 
     </div>
 
 
