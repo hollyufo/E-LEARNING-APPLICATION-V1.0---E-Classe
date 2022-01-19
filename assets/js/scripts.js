@@ -10,3 +10,6 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+<svg width="255" height="157" viewBox="0 0 255 157" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="255" height="157" rx="8" fill="#F0F9FF"/>
+</svg>
