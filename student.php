@@ -60,18 +60,18 @@
                             </thead>
                             <tbody>
                             <?php
-                              $students = array (
-                                array("img"=>"./assets/img/pexels-photo-2379004 1 (2).png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
-                                array("img"=>"./assets/img/pexels-photo-2379004 1 (2).png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
-                                array("img"=>"./assets/img/pexels-photo-2379004 1 (2).png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
-                                array("img"=>"./assets/img/pexels-photo-2379004 1 (2).png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
-                                array("img"=>"./assets/img/pexels-photo-2379004 1 (2).png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
-                                array("img"=>"./assets/img/pexels-photo-2379004 1 (2).png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
-                                array("img"=>"./assets/img/pexels-photo-2379004 1 (2).png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A")
-                              );
-                              foreach ($students as $student) {
+                                $students = array (
+                                array("img"=>"pexels.png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
+                                array("img"=>"pexels.png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
+                                array("img"=>"pexels.png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
+                                array("img"=>"pexels.png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
+                                array("img"=>"pexels.png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
+                                array("img"=>"pexels.png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
+                                array("img"=>"pexels.png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A")
+                                );
+                                foreach ($students as $student) {
                                 echo '<tr class="mytr">';
-                                echo '<th><img src="'.$student['img'].'" alt="user1"></th>';
+                                echo '<th><img src="./assets/img/'.$student['img'].'" alt="user1"></th>';
                                 echo '<td class="mytd">'.$student['name'].'</td>';
                                 echo '<td class="mytd">'.$student['Email'].'</td>';
                                 echo '<td class="mytd">'.$student['phone'].'</td>';
@@ -86,8 +86,8 @@
                                 </td>
                                 ';
                                 echo '</tr>';
-                            } 
-                            ?>
+                                } 
+                                ?>
                             </tbody>
                           </table>
                     </div>
