@@ -11,6 +11,8 @@ tr:nth-child(odd) {
 .theader1{
     background-color: #E5E5E5 !important;
 }
-.res-table{
-    overflow-x:auto;
+@media (max-width: 1090px) {
+    .res-table{
+        overflow-x:auto;
+    }
 }
