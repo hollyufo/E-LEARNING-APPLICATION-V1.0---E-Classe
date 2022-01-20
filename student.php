@@ -72,7 +72,7 @@
                               foreach ($students as $student) {
                                 echo '<tr class="mytr">';
                                 echo '<th><img src="'.$student['img'].'" alt="user1"></th>';
-                                echo '<td class="mytd">.'.$student['name'].'</td>';
+                                echo '<td class="mytd">'.$student['name'].'</td>';
                                 echo '<td class="mytd">'.$student['Email'].'</td>';
                                 echo '<td class="mytd">'.$student['phone'].'</td>';
                                 echo '<td class="mytd">'.$student['enroll1'].'</td>';
