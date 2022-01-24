@@ -62,12 +62,12 @@
                             <?php
                                 $students = array (
                                 array("img"=>"pexels.png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
-                                array("img"=>"pexels.png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
-                                array("img"=>"pexels.png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
-                                array("img"=>"pexels.png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
-                                array("img"=>"pexels.png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
-                                array("img"=>"pexels.png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
-                                array("img"=>"pexels.png", "name"=>"username1", "Email"=>"user@email.com1", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A")
+                                array("img"=>"pexels.png", "name"=>"username2", "Email"=>"user@email.com2", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
+                                array("img"=>"pexels.png", "name"=>"username3", "Email"=>"user@email.com3", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
+                                array("img"=>"pexels.png", "name"=>"username4", "Email"=>"user@email.com4", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
+                                array("img"=>"pexels.png", "name"=>"username5", "Email"=>"user@email.com5", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
+                                array("img"=>"pexels.png", "name"=>"username6", "Email"=>"user@email.com6", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A"),
+                                array("img"=>"pexels.png", "name"=>"username7", "Email"=>"user@email.com7", "phone"=>"1234567898A", "enroll1"=>"1234567898A", "date1"=>"08-dec,2021A")
                                 );
                                 foreach ($students as $student) {
                                 echo '<tr class="mytr">';
