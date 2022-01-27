@@ -1,58 +1,10 @@
 [
     {
-        "img":"pexels.png",
-        "name":"username11",
-        "Email":"user@email.com1",
-        "phone":"1234567898A",
-        "enroll1":"1234567898A",
-        "date1":"08-dec,2021A"
-        },
-    {
-        "img":"pexels.png",
-        "name":"username2",
-        "Email":"user@email.com2",
-        "phone":"1234567898A",
-        "enroll1":"1234567898A",
-        "date1":"08-dec,2021A"
-        },
-    {
-        "img":"pexels.png",
-        "name":"username3",
-        "Email":"user@email.com3",
-        "phone":"1234567898A",
-        "enroll1":"1234567898A",
-        "date1":"08-dec,2021A"
-        },
-    {
-        "img":"pexels.png",
-        "name":"username4",
-        "Email":"user@email.com4",
-        "phone":"1234567898A",
-        "enroll1":"1234567898A",
-        "date1":"08-dec,2021A"
-        },
-    {
-        "img":"pexels.png",
-        "name":"username5",
-        "Email":"user@email.com5",
-        "phone":"1234567898A",
-        "enroll1":"1234567898A",
-        "date1":"08-dec,2021A"
-        },
-    {
-        "img":"pexels.png",
-        "name":"username6",
-        "Email":"user@email.com6",
-        "phone":"1234567898A",
-        "enroll1":"1234567898A",
-        "date1":"08-dec,2021A"
-        },
-    {
-        "img":"pexels.png",
-        "name":"username7",
-        "Email":"user@email.com7",
-        "phone":"1234567898A",
-        "enroll1":"1234567898A",
-        "date1":"08-dec,2021A"
-        }
-    ]
+        "img": "pexels.png",
+        "name": "imrane chaibi",
+        "Email": "imranchaibi1@gmail.com",
+        "phone": "0632823950",
+        "enroll1": "3241234213",
+        "date1": "2342134234"
+    }
+]
