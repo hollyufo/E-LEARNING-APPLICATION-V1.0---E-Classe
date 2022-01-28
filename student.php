@@ -138,23 +138,23 @@
                     <form method="POST">
                         <div class="mb-3">
                             <label for="name" class="form-label">name</label>
-                            <input type="text" name="name" class="form-control" id="" aria-describedby="Recipient's username">
+                            <input type="text" name="name" class="form-control" id="" aria-describedby="Recipient's username" required>
                         </div>
                         <div class="mb-3">
                             <label for="Email1" class="form-label">Email address</label>
-                            <input type="email" name="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="email" name="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                         </div>
                         <div class="mb-3">
                             <label for="phone" class="form-label">Phone</label>
-                            <input type="text" name="phone" class="form-control" id="" aria-describedby="Recipient's username">
+                            <input type="tel" name="phone" class="form-control" id="" aria-describedby="Recipient's username" required>
                         </div>
                         <div class="mb-3">
                             <label for="enroolnum" class="form-label">enroolnum</label>
-                            <input type="text" name="enroolnum" class="form-control" id="" aria-describedby="Recipient's username">
+                            <input type="number" name="enroolnum" class="form-control" id="" aria-describedby="Recipient's username" required>
                         </div>
                         <div class="mb-3">
                             <label for="dateofadmission" class="form-label">date of admission</label>
-                            <input type="text" name="dateofadmission" class="form-control" id="" aria-describedby="Recipient's username">
+                            <input type="date" name="dateofadmission" class="form-control" id="" aria-describedby="Recipient's username" required>
                         </div>
                         
                         <input class="btn btn-primary" type="submit" name="save" value="Save">

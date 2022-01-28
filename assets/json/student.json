@@ -1,26 +1,10 @@
-[
-    {
+{
+    "1": {
         "img": "pexels.png",
-        "name": "imrane chaibi",
-        "Email": "imranchaibi1@gmail.com",
-        "phone": "0632823950",
-        "enroll1": "23434234",
-        "date1": "2342134234"
-    },
-    {
-        "img": "pexels.png",
-        "name": "imrane chaibi",
-        "Email": "imranchaibi1@gmail.com",
-        "phone": "0632823950",
-        "enroll1": "13123",
-        "date1": "2342134234"
-    },
-    {
-        "img": "pexels.png",
-        "name": "imrane chaibi",
-        "Email": "imranchaibi1@gmail.com",
-        "phone": "0632823950",
-        "enroll1": "13123",
-        "date1": "2342134234"
+        "name": "Quin Yang",
+        "Email": "rakivedog@mailinator.com",
+        "phone": "+1 (629) 974-4595",
+        "enroll1": "10",
+        "date1": "2019-12-25"
     }
-]
+}
