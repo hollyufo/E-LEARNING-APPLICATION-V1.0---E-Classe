@@ -16,3 +16,15 @@
   overflow-x:auto;
   white-space: nowrap;
 }
+.button1{
+    display: flex;
+    justify-content: center;
+}
+.editform{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.fromcon{
+  width: 40%;
+}
