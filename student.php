@@ -49,6 +49,7 @@
                         </ul>
                     </div>
                     <?php
+                            // add data
                             if(isset($_POST['save'])){
                                 //open the json file
                                 $new_student = file_get_contents("./assets/json/student.json");
@@ -92,6 +93,7 @@
                             </thead>
                             <tbody>
                             <?php
+                            // show data
 
                                 $lists = file_get_contents("./assets/json/student.json");
 
@@ -118,6 +120,7 @@
                                     $index++;
                                 } 
                                 ?>
+                                </div>
                             </tbody>
                           </table>
                     </div>
@@ -154,7 +157,7 @@
                             <input type="text" name="dateofadmission" class="form-control" id="" aria-describedby="Recipient's username">
                         </div>
                         
-                        <input type="submit" name="save" value="Save">
+                        <input class="btn btn-primary" type="submit" name="save" value="Save">
                         
                     </form>
                 </div>

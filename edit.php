@@ -70,7 +70,7 @@
                             <input type="text" name="dateofadmission" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['date1']; ?>">
                         </div>
                         
-                        <input type="submit" class="btn btn-primary" name="save" value="Save">
+                        <input class="btn btn-primary" type="submit" class="btn btn-primary" name="save" value="Save">
                         </div>
 
                         
@@ -96,7 +96,7 @@
                                         $students_array[$index] = $input;
 
                                         //encode back to json
-                                        $students = json_encode($student_array, JSON_PRETTY_PRINT);
+                                        $students = json_encode($students_array, JSON_PRETTY_PRINT);
                                         file_put_contents('./assets/json/student.json', $students);
 
 
