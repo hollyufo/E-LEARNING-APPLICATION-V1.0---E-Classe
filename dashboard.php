@@ -1,5 +1,6 @@
                 <?php
-                    include './assets/utilities/ndashboard.php'; 
+                    include './assets/utilities/ndashboard.php';
+                    require './assets/function/db.php'
                 ?>
                 <!-- Page content-->
                 <div class="container-fluid">

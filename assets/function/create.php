@@ -1,0 +1,24 @@
+<?php
+include './db.php'; 
+    
+  // taking values from the form
+  $Name =  $_POST['name'];
+  $Email = $_POST['Email'];
+  $Phone =  $_POST['phone'];
+  $Enrollnumber = $_POST['enroolnum'];
+  $dateofadmin = $_POST['dateofadmission'];
+    
+  // adding it to the data base
+  $sql = "INSERT INTO persons VALUES (null,'$Name', 
+      '$Email','$Phone','$Enrollnumber','$dateofadmin')";
+    
+  if(mysqli_query($conn, $sql)){
+    header('location: ../../student.php');
+  } else{
+      echo "ERROR: Hush! Sorry $sql. " 
+          . mysqli_error($conn);
+  }
+    
+  // Close connection
+  mysqli_close($conn);
+  ?>

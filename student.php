@@ -135,7 +135,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="POST">
+                    <form action="./assets/function/create.php" method="POST">
                         <div class="mb-3">
                             <label for="name" class="form-label">name</label>
                             <input type="text" name="name" class="form-control" id="" aria-describedby="Recipient's username" required>
