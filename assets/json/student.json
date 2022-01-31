@@ -1,10 +1,26 @@
-{
-    "1": {
+[
+    {
         "img": "pexels.png",
-        "name": "Quin Yang",
-        "Email": "rakivedog@mailinator.com",
-        "phone": "+1 (629) 974-4595",
-        "enroll1": "10",
-        "date1": "2019-12-25"
+        "name": "Jaden Chen",
+        "Email": "jutesaja@mailinator.com",
+        "phone": "+1 (932) 185-2294",
+        "enroll1": "87",
+        "date1": "1996-10-01"
+    },
+    {
+        "img": "pexels.png",
+        "name": "Burke Everett",
+        "Email": "revewi@mailinator.com",
+        "phone": "+1 (238) 715-4575",
+        "enroll1": "67",
+        "date1": "1998-05-08"
+    },
+    {
+        "img": "pexels.png",
+        "name": "Deborah Hanson",
+        "Email": "bixufyg@mailinator.com",
+        "phone": "+1 (966) 692-3739",
+        "enroll1": "83",
+        "date1": "1990-08-05"
     }
-}
+]
