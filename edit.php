@@ -1,13 +1,13 @@
-<?php
-                    include './assets/utilities/nstudent.php'; 
-                ?>
                 <?php
-                    $index = $_GET['index'];
+                    include './assets/utilities/nstudent.php';
+                    include './assets/function/db.php';
 
-                    $students = file_get_contents('./assets/json/student.json');
-                    $students_array = json_decode($students, true);
+                    $student_id = $_GET['id'];
+                    $update = true;
+                    $sql = "SELECT * FROM students WHERE id=$student_id";
+                    $record = mysqli_query($conn, $sql);
+                    $row = mysqli_fetch_array($record, MYSQLI_ASSOC);
 
-                    $row = $students_array[$index];
                 ?>
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
@@ -51,7 +51,7 @@
                         <div class="fromcon">
                         <div class="mb-3">
                             <label for="name" class="form-label">name</label>
-                            <input type="text" name="name" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['name']; ?>">
+                            <input type="text" name="name" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['fName']; ?>">
                         </div>
                         <div class="mb-3">
                             <label for="Email1" class="form-label">Email address</label>
@@ -59,15 +59,15 @@
                         </div>
                         <div class="mb-3">
                             <label for="phone" class="form-label">Phone</label>
-                            <input type="text" name="phone" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['phone']; ?>">
+                            <input type="text" name="phone" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['Phone']; ?>">
                         </div>
                         <div class="mb-3">
                             <label for="enroolnum" class="form-label">enroolnum</label>
-                            <input type="text" name="enroolnum" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['enroll1']; ?>">
+                            <input type="text" name="enroolnum" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['EnrollNumber']; ?>">
                         </div>
                         <div class="mb-3">
                             <label for="dateofadmission" class="form-label">date of admission</label>
-                            <input type="text" name="dateofadmission" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['date1']; ?>">
+                            <input type="text" name="dateofadmission" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['AdmissionDate']; ?>">
                         </div>
                         
                         <input class="btn btn-primary" type="submit" class="btn btn-primary" name="save" value="Save">
@@ -79,32 +79,20 @@
                     </div>
                 </div>
                 <?php
-                            if(isset($_POST['save'])){
-                        
-                                //data in out POST
-                                $input = array(
-                                    
-                                    'img' => 'pexels.png',
-                                    'name' => $_POST['name'],
-                                    'Email' => $_POST['Email'],
-                                    'phone' => $_POST['phone'],
-                                    'enroll1'=> $_POST['enroolnum'],
-                                    'date1'=> $_POST['dateofadmission']
-                                );
-                                
-                                		//update the selected index
-                                        $students_array[$index] = $input;
-
-                                        //encode back to json
-                                        $students = json_encode($students_array, JSON_PRETTY_PRINT);
-                                        file_put_contents('./assets/json/student.json', $students);
+                    if(isset($_POST['save'])){
 
 
-                                        // header('location: ');
-                                        echo "<script>window.location.href = './student.php';</script>";
-                            }
+                        $fName =  $_POST['name'];
+                        $Email = $_POST['Email'];
+                        $Phone =  $_POST['phone'];
+                        $Enrollnumber = $_POST['enroolnum'];
+                        $dateofadmin = $_POST['dateofadmission'];
+                        mysqli_query($conn, "UPDATE students SET fName='$fName', Email='$Email', fName='$fName', EnrollNumber='$Enrollnumber', AdmissionDate='$dateofadmin' WHERE id=$student_id");
+                        $_SESSION['message'] = "Address updated!"; 
+                        echo "<script>window.location.href = './student.php';</script>";
 
-                        ?>
+                    }
+                ?>
         <?php
             include './assets/utilities/fdashboard.php'; 
         ?>
