@@ -15,16 +15,16 @@
             <h1 class="ctitle1">E-class</h1>
             <h2 class="ctitile2">SIGN IN</h2>
             <p class="cpara">Enter your credentials to access your account</p>
-            <form action="test.php" class="form1">
+            <form name="form" action="./assets/function/authentication.php" class="form1" onsubmit = "return validation()" method = "POST">
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label labale1">Email</label>
-                    <input type="text" class="form-control input1   " id="formGroupExampleInput" placeholder="Enter your email">
+                    <input id ="user" name= "user" type="text" class="form-control input1" placeholder="Enter your email">
                 </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label labale1">Password</label>
-                    <input type="password" class="form-control input1" id="formGroupExampleInput2" placeholder="Enter your password">
+                    <input id="pass" name="pass" type="password" class="form-control input1" id="formGroupExampleInput2" placeholder="Enter your password">
                 </div>
-                <button type="button" class="btn btn-color">SIGN IN</button>                
+                <button type="submit" class="btn btn-color">SIGN IN</button>                
             </form>
             <p class="cpara2">Forgot your password? <a href="#" class="mylink">Reset Password</a></p>
         </div>
@@ -38,5 +38,6 @@
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="./assets/js/passvalidation.js" ></script>
 </body>
 </html>
