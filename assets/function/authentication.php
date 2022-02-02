@@ -1,24 +1,28 @@
 <?php
-    include('db.php');  
-    $username = $_POST['user'];  
-    $password = $_POST['pass'];  
+   include("db.php");
+   session_start();
+   
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
       
-        //to prevent from mysqli injection
-        $username = stripcslashes($username);  
-        $password = stripcslashes($password);  
-        $username = mysqli_real_escape_string($conn, $username);  
-        $password = mysqli_real_escape_string($conn, $password);  
-
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-        $sql = "SELECT * from users where email = '$username' and password = '$hashed_password'";  
-        $result = mysqli_query($conn, $sql);  
-        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
-        $count = mysqli_num_rows($result);  
-          
-        if($count == 1){  
-            header('location: index.php');  
-        }  
-        else{  
-            echo "<h1> Login failed. Invalid username or password.</h1>";  
-        }    
+      $myusername = mysqli_real_escape_string($conn,$_POST['user']);
+      $mypassword = mysqli_real_escape_string($conn,$_POST['pass']); 
+      
+      $sql = "SELECT id FROM users WHERE email = '$myusername' and password = '$mypassword'";
+      $result = mysqli_query($conn,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $active = $row['active'];
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+		
+      if($count == 1) {
+         session_register("myusername");
+         $_SESSION['login_user'] = $myusername;
+         
+         header("location: dashboard.php");
+      }else {
+         $error = "Your Login Name or Password is invalid";
+      }
+   }
