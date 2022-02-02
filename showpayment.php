@@ -1,14 +1,12 @@
-                <?php
-                    include './assets/utilities/nstudent.php';
-                    include './assets/function/db.php';
-
-                    $student_id = $_GET['id'];
-                    $update = true;
-                    $sql = "SELECT * FROM students WHERE id=$student_id";
-                    $record = mysqli_query($conn, $sql);
-                    $row = mysqli_fetch_array($record, MYSQLI_ASSOC);
-
-                ?>
+<?php
+            include './assets/utilities/hPayment.php';
+            include './assets/function/db.php';
+            $student_id = $_GET['id'];
+            $update = true;
+            $sql = "SELECT * FROM payment_details WHERE id=$student_id";
+            $record = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_array($record, MYSQLI_ASSOC);
+            ?>
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
                 <!-- Top navigation-->
@@ -44,56 +42,48 @@
                 <!-- Page content-->
                 <div class="container-fluid m123">
                     <div class="mycontainer2 border-bottom">
-                        <p class="stitle1">Edit student</p>
+                        <p class="stitle1">Payment Details</p>
+                        <ul class="myul2">
+                            <li><svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.6 11.375H1.39998C0.157481 11.375 -0.472519 12.8574 0.411231 13.7211L6.01123 19.2211C6.55811 19.7582 7.44623 19.7582 7.99311 19.2211L13.5931 13.7211C14.4681 12.8574 13.8425 11.375 12.6 11.375ZM6.99998 18.25L1.39998 12.75H12.6L6.99998 18.25ZM1.39998 8.625H12.6C13.8425 8.625 14.4725 7.14257 13.5887 6.2789L7.98873 0.7789C7.44186 0.241791 6.55373 0.241791 6.00686 0.7789L0.406856 6.2789C-0.468144 7.14257 0.157481 8.625 1.39998 8.625ZM6.99998 1.74999L12.6 7.24999H1.39998L6.99998 1.74999Z" fill="#00C1FE"/>
+                                </svg>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="container">
-                    <form method="POST" class="editform">
-                        <div class="fromcon">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">name</label>
-                            <input type="text" name="name" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['fName']; ?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="Email1" class="form-label">Email address</label>
-                            <input type="email" name="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $row['Email']; ?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone</label>
-                            <input type="text" name="phone" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['Phone']; ?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="enroolnum" class="form-label">enroolnum</label>
-                            <input type="text" name="enroolnum" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['EnrollNumber']; ?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="dateofadmission" class="form-label">date of admission</label>
-                            <input type="text" name="dateofadmission" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['AdmissionDate']; ?>">
-                        </div>
-                        
-                        <input class="btn btn-primary" type="submit" class="btn btn-primary" name="save" value="Save">
-                        </div>
-
-                        
-                    </form>
-                </div>
+                    <div class="showp">
+                        <form method="POST" class="formshow">
+                            <div class="fromcon">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">name</label>
+                                <input disabled type="text" name="name" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['fName']; ?>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Email1" class="form-label">Payment Schedule</label>
+                                <input disabled type="text" name="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $row['PaymentSchedule']; ?>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="number" class="form-label">Bill Number</label>
+                                <input disabled type="text" name="number" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['BillNumber']; ?>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="AmountPaid" class="form-label">Amount Paid</label>
+                                <input disabled type="text" name="AmountPaid" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['AmountPaid']; ?>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="dateofadmission" class="form-label">Blanace Amount</label>
+                                <input disabled type="number" name="dateofadmission" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['Blanaceamount']; ?>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="dateofadmission" class="form-label">Blanace Amount</label>
+                                <input disabled type="date" name="dateofadmission" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['tDate']; ?>">
+                            </div>
+                            </div>                        
+                        </form>   
                     </div>
+
                 </div>
-                <?php
-                    if(isset($_POST['save'])){
-
-
-                        $fName =  $_POST['name'];
-                        $Email = $_POST['Email'];
-                        $Phone =  $_POST['phone'];
-                        $Enrollnumber = $_POST['enroolnum'];
-                        $dateofadmin = $_POST['dateofadmission'];
-                        mysqli_query($conn, "UPDATE students SET fName='$fName', Email='$Email', fName='$fName', EnrollNumber='$Enrollnumber', AdmissionDate='$dateofadmin' WHERE id=$student_id");
-                        $_SESSION['message'] = "Address updated!"; 
-                        echo "<script>window.location.href = './student.php';</script>";
-                        
-
-                    }
-                ?>
+            </div>
+        </div> 
         <?php
-            include './assets/utilities/fdashboard.php'; 
+           include './assets/utilities/fdashboard.php';
         ?>

@@ -1,10 +1,6 @@
 <?php
-	$index = $_GET['index'];
-	$students = file_get_contents('./assets/json/student.json');
-	$students = json_decode($students, true);
-	unset($students[$index]);
-	$students = json_encode($students, JSON_PRETTY_PRINT);
-	file_put_contents('./assets/json/student.json', $students);
-
-	header('location: student.php');
-?>
+		include './assets/function/db.php';
+		$student_id = $_GET['id'];
+		mysqli_query($conn, "DELETE FROM students WHERE id=$student_id");
+		$_SESSION['message'] = "Address deleted!"; 
+		header('location: student.php');

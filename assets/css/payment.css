@@ -17,3 +17,11 @@ tr:nth-child(odd) {
         white-space: nowrap;
     }
 }
+.formshow{
+    width: 50%;
+    min-width: 350px;
+}
+.showp{
+    display: flex;
+    justify-content: center;
+}

@@ -1,5 +1,5 @@
-            <?php
-            include './assets/utilities/hPayment.php';
+<?php
+            include './assets/utilities/fPayment.php';
             include './assets/function/db.php';
             ?>
             <!-- Page content wrapper-->
@@ -51,35 +51,35 @@
                         <thead>
                           <tr class="theader1">
                             <th scope="col">Name</th>
-                            <th scope="col">Payment Schedule</th>
-                            <th scope="col">Bill Number</th>
-                            <th scope="col">Amount Paid</th>
-                            <th scope="col">Blanace amount</th>
-                            <th scope="col">Date</th>
-                            <th scope="col"></th>
+                            <th scope="col">creator</th>
+                            <th scope="col">duration</th>
+                            <th scope="col">created</th>
+                            <th scope="col">link</th>
+                            <th></th>
                           </tr>
                         </thead>
                         <tbody>
                         <?php
                                 // show data
-                                $sql = "SELECT id, fname, PaymentSchedule, BillNumber, 	AmountPaid, Blanaceamount, tDate FROM payment_details";
+                                $sql = "SELECT id, cname, creator, created,  duration,  link FROM course";
                                 $result = mysqli_query($conn, $sql);
                                 
                                 if (mysqli_num_rows($result) > 0) {
                                 // output data of each row
-                                while($student = mysqli_fetch_assoc($result)) {
+                                while($courses = mysqli_fetch_assoc($result)) {
                                     echo '<tr>';
-                                    echo '<td>'.$student['fname'].'</td>';
-                                    echo '<td>'.$student['PaymentSchedule'].'</td>';
-                                    echo '<td>'.$student['BillNumber'].'</td>';
-                                    echo '<td>'.$student['AmountPaid'].'</td>';
-                                    echo '<td>'.$student['Blanaceamount'].'</td>';
-                                    echo '<td>'.$student['tDate'].'</td>';
-                                    echo '<td>
-                                        <a href="./showpayment.php?id='.$student['id'].'"><svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.49999 6.875C7.94201 6.875 8.36594 6.69063 8.6785 6.36244C8.99106 6.03425 9.16665 5.58913 9.16665 5.125C9.16665 4.66087 8.99106 4.21575 8.6785 3.88756C8.36594 3.55937 7.94201 3.375 7.49999 3.375C7.47394 3.375 7.45103 3.38156 7.42577 3.38293C7.50608 3.61516 7.52164 3.86664 7.47063 4.10783C7.41961 4.34903 7.30413 4.56994 7.13774 4.74465C6.97136 4.91935 6.76096 5.04061 6.53125 5.09417C6.30154 5.14774 6.06205 5.1314 5.84087 5.04707C5.84087 5.07441 5.83332 5.09848 5.83332 5.125C5.83332 5.35481 5.87643 5.58238 5.96019 5.7947C6.04394 6.00702 6.16671 6.19993 6.32147 6.36244C6.63403 6.69063 7.05796 6.875 7.49999 6.875ZM14.9094 5.60078C13.4971 2.70754 10.7013 0.75 7.49999 0.75C4.29868 0.75 1.50207 2.70891 0.0906108 5.60105C0.0310383 5.72479 0 5.86149 0 6.00014C0 6.13878 0.0310383 6.27549 0.0906108 6.39922C1.50285 9.29246 4.29868 11.25 7.49999 11.25C10.7013 11.25 13.4979 9.29109 14.9094 6.39895C14.9689 6.27521 15 6.13851 15 5.99986C15 5.86122 14.9689 5.72451 14.9094 5.60078ZM7.49999 1.625C8.15926 1.625 8.80372 1.83027 9.35188 2.21486C9.90005 2.59944 10.3273 3.14607 10.5796 3.78561C10.8319 4.42515 10.8979 5.12888 10.7693 5.80782C10.6407 6.48675 10.3232 7.11039 9.85701 7.59987C9.39083 8.08936 8.79689 8.4227 8.15029 8.55775C7.50368 8.6928 6.83346 8.62349 6.22437 8.35858C5.61529 8.09367 5.09469 7.64507 4.72842 7.0695C4.36215 6.49392 4.16665 5.81723 4.16665 5.125C4.16762 4.19705 4.51912 3.3074 5.14403 2.65125C5.76894 1.99509 6.61623 1.62601 7.49999 1.625ZM7.49999 10.375C4.70415 10.375 2.14946 8.69855 0.833319 6C1.57354 4.47419 2.7573 3.23556 4.21301 2.46363C3.66952 3.20246 3.33332 4.11793 3.33332 5.125C3.33332 6.28532 3.77231 7.39812 4.55371 8.21859C5.33511 9.03906 6.39492 9.5 7.49999 9.5C8.60505 9.5 9.66486 9.03906 10.4463 8.21859C11.2277 7.39812 11.6667 6.28532 11.6667 5.125C11.6667 4.11793 11.3305 3.20246 10.787 2.46363C12.2427 3.23556 13.4264 4.47419 14.1667 6C12.8508 8.69855 10.2958 10.375 7.49999 10.375Z" fill="#00C1FE"/>
-                                        </svg>
-                                        </a></td>
+                                    echo '<td>'.$courses['cname'].'</td>';
+                                    echo '<td>'.$courses['creator'].'</td>';
+                                    echo '<td>'.$courses['created'].'</td>';
+                                    echo '<td>'.$courses['duration'].'</td>';
+                                    echo '<td>'.$courses['link'].'</td>';
+                                    echo '
+                                    <td class="mytd">
+                                        <a href="./editcourse.php?id='.$courses['id'].'"><svg class="smg1" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.3033 2.08777L16.9113 0.695801C16.4478 0.231934 15.8399 0 15.2321 0C14.6242 0 14.0164 0.231934 13.5525 0.69543L0.475916 13.772L0.00462689 18.0107C-0.0547481 18.5443 0.365701 19 0.88783 19C0.920858 19 0.953885 18.9981 0.987654 18.9944L5.22332 18.5265L18.3036 5.44617C19.231 4.51881 19.231 3.01514 18.3033 2.08777ZM4.67818 17.3924L1.2259 17.775L1.61035 14.3175L11.4031 4.52475L14.4747 7.59629L4.67818 17.3924ZM17.4639 4.60676L15.3141 6.7565L12.2426 3.68496L14.3923 1.53521C14.6164 1.31107 14.9148 1.1875 15.2321 1.1875C15.5494 1.1875 15.8474 1.31107 16.0719 1.53521L17.4639 2.92719C17.9266 3.39031 17.9266 4.14363 17.4639 4.60676Z" fill="#00C1FE"/></svg></a>                                    
+                                        <a href="./removecourse.php?id='.$courses['id'].'"><svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.285713 2.25H4L5.2 0.675C5.35968 0.465419 5.56674 0.295313 5.80478 0.178154C6.04281 0.0609948 6.30529 0 6.57143 0L9.42857 0C9.69471 0 9.95718 0.0609948 10.1952 0.178154C10.4333 0.295313 10.6403 0.465419 10.8 0.675L12 2.25H15.7143C15.7901 2.25 15.8627 2.27963 15.9163 2.33238C15.9699 2.38512 16 2.45666 16 2.53125V3.09375C16 3.16834 15.9699 3.23988 15.9163 3.29262C15.8627 3.34537 15.7901 3.375 15.7143 3.375H15.0393L13.8536 16.4637C13.8152 16.8833 13.6188 17.2737 13.3029 17.558C12.987 17.8423 12.5745 17.9999 12.1464 18H3.85357C3.42554 17.9999 3.01302 17.8423 2.69711 17.558C2.38121 17.2737 2.18477 16.8833 2.14643 16.4637L0.960713 3.375H0.285713C0.209937 3.375 0.137264 3.34537 0.083683 3.29262C0.0301008 3.23988 0 3.16834 0 3.09375V2.53125C0 2.45666 0.0301008 2.38512 0.083683 2.33238C0.137264 2.27963 0.209937 2.25 0.285713 2.25ZM9.88571 1.35C9.8323 1.28034 9.76324 1.22379 9.68393 1.18475C9.60463 1.14572 9.51723 1.12527 9.42857 1.125H6.57143C6.48277 1.12527 6.39537 1.14572 6.31606 1.18475C6.23676 1.22379 6.1677 1.28034 6.11429 1.35L5.42857 2.25H10.5714L9.88571 1.35ZM3.28571 16.3617C3.29748 16.5019 3.36245 16.6325 3.46768 16.7277C3.57292 16.8228 3.7107 16.8754 3.85357 16.875H12.1464C12.2893 16.8754 12.4271 16.8228 12.5323 16.7277C12.6376 16.6325 12.7025 16.5019 12.7143 16.3617L13.8929 3.375H2.10714L3.28571 16.3617Z" fill="#00C1FE"/>
+                                            </svg></a>                                        
+                                    </td>
                                     ';
                                     echo '</tr>';
                                 }
@@ -106,30 +106,25 @@
                 <div class="modal-body">
                     <form method="post">
                         <div class="mb-3">
-                            <label for="name" class="form-label">name</label>
+                            <label for="name" class="form-label">course name</label>
                             <input type="text" name="name" class="form-control" id="" aria-describedby="Recipient's username" required>
                         </div>
                         <div class="mb-3">
-                            <label for="" class="form-label">Payment Schedule</label>
-                            <input type="text" name="PaymentSchedule" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <label for="name" class="form-label">creator</label>
+                            <input type="name" name="creator" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label">BillNumber</label>
-                            <input type="number" name="BillNumber" class="form-control" id="" aria-describedby="Recipient's username" required>
+                            <label for="phone" class="form-label">date created</label>
+                            <input type="date" name="created" class="form-control" id="" aria-describedby="Recipient's username" required>
                         </div>
                         <div class="mb-3">
-                            <label for="enroolnum" class="form-label">Amount Paid</label>
-                            <input type="number" name="AmountPaid" class="form-control" id="" aria-describedby="Recipient's username" required>
+                            <label for="enroolnum" class="form-label">duration</label>
+                            <input type="number" name="duration" class="form-control" id="" aria-describedby="Recipient's username" required>
                         </div>
                         <div class="mb-3">
-                            <label for="dateofadmission" class="form-label">Blanace Amount</label>
-                            <input type="number" name="Blanaceamount" class="form-control" id="" aria-describedby="Recipient's username" required>
+                            <label for="dateofadmission" class="form-label">link</label>
+                            <input type="link" name="link" class="form-control" id="" aria-describedby="Recipient's username" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="dateofadmission" class="form-label">Blanace Amount</label>
-                            <input type="date" name="date" class="form-control" id="" aria-describedby="Recipient's username" required>
-                        </div>
-                        
                         <input class="btn btn-primary" type="submit" name="save" value="Save">
                         
                     </form>
@@ -144,18 +139,17 @@
                 if(isset($_POST['save'])){
                     // taking values from the form
                     $fName =  $_POST['name'];
-                    $paiment = $_POST['PaymentSchedule'];
-                    $bill =  $_POST['BillNumber'];
-                    $AmountPaid = $_POST['AmountPaid'];
-                    $Blanaceamount = $_POST['Blanaceamount'];
-                    $Date = $_POST['date'];
+                    $creator = $_POST['creator'];
+                    $created =  $_POST['created'];
+                    $duration = $_POST['duration'];
+                    $link = $_POST['link'];
                         
                     // adding it to the data base
-                    $sql = "INSERT INTO payment_details VALUES (null,'$fName', 
-                        '$paiment','$bill','$AmountPaid','$Blanaceamount','$Date')";
+                    $sql = "INSERT INTO course VALUES (null,'$fName', 
+                        '$creator','$created','$duration','$link')";
                         
                     if(mysqli_query($conn, $sql)){
-                        echo "<script>window.location.href = './payment.php';</script>";
+                        echo "<script>window.location.href = './course.php';</script>";
                     } else{
                         echo "ERROR: Hush! Sorry $sql. " 
                             . mysqli_error($conn);

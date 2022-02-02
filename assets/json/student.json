@@ -1,5 +1,5 @@
-[
-    {
+{
+    "0": {
         "img": "pexels.png",
         "name": "Jaden Chen",
         "Email": "jutesaja@mailinator.com",
@@ -7,15 +7,7 @@
         "enroll1": "87",
         "date1": "1996-10-01"
     },
-    {
-        "img": "pexels.png",
-        "name": "Burke Everett",
-        "Email": "revewi@mailinator.com",
-        "phone": "+1 (238) 715-4575",
-        "enroll1": "67",
-        "date1": "1998-05-08"
-    },
-    {
+    "2": {
         "img": "pexels.png",
         "name": "Deborah Hanson",
         "Email": "bixufyg@mailinator.com",
@@ -23,4 +15,4 @@
         "enroll1": "83",
         "date1": "1990-08-05"
     }
-]
+}

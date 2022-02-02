@@ -1,10 +1,10 @@
-                <?php
-                    include './assets/utilities/nstudent.php';
+<?php
+                    include './assets/utilities/fPayment.php';
                     include './assets/function/db.php';
 
-                    $student_id = $_GET['id'];
+                    $course_id = $_GET['id'];
                     $update = true;
-                    $sql = "SELECT * FROM students WHERE id=$student_id";
+                    $sql = "SELECT * FROM course WHERE id=$course_id";
                     $record = mysqli_query($conn, $sql);
                     $row = mysqli_fetch_array($record, MYSQLI_ASSOC);
 
@@ -44,54 +44,49 @@
                 <!-- Page content-->
                 <div class="container-fluid m123">
                     <div class="mycontainer2 border-bottom">
-                        <p class="stitle1">Edit student</p>
+                        <p class="stitle1">Edit course</p>
                     </div>
                     <div class="container">
-                    <form method="POST" class="editform">
-                        <div class="fromcon">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">name</label>
-                            <input type="text" name="name" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['fName']; ?>">
+                        <form method="post" class="editform">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">course name</label>
+                                <input type="text" name="name" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['cname']; ?>" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">creator</label>
+                                <input type="name" name="creator" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $row['creator']; ?>" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">date created</label>
+                                <input type="date" name="created" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['created']; ?>" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="enroolnum" class="form-label">duration</label>
+                                <input type="number" name="duration" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['duration']; ?>" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dateofadmission" class="form-label">link</label>
+                                <input type="link" name="link" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['link']; ?>" required>
+                            </div>
+                            <input class="btn btn-primary" type="submit" name="save" value="Save">
+                            
                         </div>
-                        <div class="mb-3">
-                            <label for="Email1" class="form-label">Email address</label>
-                            <input type="email" name="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $row['Email']; ?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone</label>
-                            <input type="text" name="phone" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['Phone']; ?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="enroolnum" class="form-label">enroolnum</label>
-                            <input type="text" name="enroolnum" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['EnrollNumber']; ?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="dateofadmission" class="form-label">date of admission</label>
-                            <input type="text" name="dateofadmission" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['AdmissionDate']; ?>">
-                        </div>
-                        
-                        <input class="btn btn-primary" type="submit" class="btn btn-primary" name="save" value="Save">
-                        </div>
-
-                        
-                    </form>
-                </div>
                     </div>
                 </div>
                 <?php
                     if(isset($_POST['save'])){
-
-
+                        // taking values from the form
                         $fName =  $_POST['name'];
-                        $Email = $_POST['Email'];
-                        $Phone =  $_POST['phone'];
-                        $Enrollnumber = $_POST['enroolnum'];
-                        $dateofadmin = $_POST['dateofadmission'];
-                        mysqli_query($conn, "UPDATE students SET fName='$fName', Email='$Email', fName='$fName', EnrollNumber='$Enrollnumber', AdmissionDate='$dateofadmin' WHERE id=$student_id");
-                        $_SESSION['message'] = "Address updated!"; 
-                        echo "<script>window.location.href = './student.php';</script>";
+                        $creator = $_POST['creator'];
+                        $created =  $_POST['created'];
+                        $duration = $_POST['duration'];
+                        $link = $_POST['link'];
+                            
+                        mysqli_query($conn, "UPDATE course SET cname='$fName', creator='$creator', duration='$duration', link='$link' WHERE id=$course_id");
                         
-
+                        // Close connection
+                        mysqli_close($conn);
+                        echo "<script>window.location.href = './course.php';</script>";
                     }
                 ?>
         <?php
