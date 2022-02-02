@@ -90,6 +90,7 @@
                         mysqli_query($conn, "UPDATE students SET fName='$fName', Email='$Email', fName='$fName', EnrollNumber='$Enrollnumber', AdmissionDate='$dateofadmin' WHERE id=$student_id");
                         $_SESSION['message'] = "Address updated!"; 
                         echo "<script>window.location.href = './student.php';</script>";
+                        
 
                     }
                 ?>
