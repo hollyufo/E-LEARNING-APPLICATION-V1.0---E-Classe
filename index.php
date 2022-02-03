@@ -10,21 +10,28 @@
     <title>Sign in</title>
 </head>
 <body>
+        <!-- Login script -->
+        <?php include('./controllers/login.php'); ?>
     <div class="mycontainer">
         <div class="card">
             <h1 class="ctitle1">E-class</h1>
             <h2 class="ctitile2">SIGN IN</h2>
             <p class="cpara">Enter your credentials to access your account</p>
-            <form name="form" action="./assets/function/authentication.php" class="form1" onsubmit = "return validation()" method = "POST">
+            <form name="form" action="" class="form1" onsubmit = "return validation()" method = "POST">
+            <?php echo $accountNotExistErr; ?>
+                    <?php echo $emailPwdErr; ?>
+                    <?php echo $verificationRequiredErr; ?>
+                    <?php echo $email_empty_err; ?>
+                    <?php echo $pass_empty_err; ?>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label labale1">Email</label>
-                    <input id ="user" name= "user" type="text" class="form-control input1" placeholder="Enter your email">
+                    <input name="email_signin" id="email_signin" type="text" class="form-control input1" placeholder="Enter your email">
                 </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label labale1">Password</label>
-                    <input id="pass" name="pass" type="password" class="form-control input1" id="formGroupExampleInput2" placeholder="Enter your password">
+                    <input name="password_signin" id="password_signin" type="password" class="form-control input1" id="formGroupExampleInput2" placeholder="Enter your password">
                 </div>
-                <button type="submit" class="btn btn-color">SIGN IN</button>                
+                <button type="submit" name="login" id="sign_in" class="btn btn-color">SIGN IN</button>                
             </form>
             <p class="cpara2">Forgot your password? <a href="#" class="mylink">Reset Password</a></p>
         </div>

@@ -1,6 +1,6 @@
 <?php
+            include './config/db.php';
             include './assets/utilities/fPayment.php';
-            include './assets/function/db.php';
             ?>
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
@@ -62,7 +62,7 @@
                         <?php
                                 // show data
                                 $sql = "SELECT id, cname, creator, created,  duration,  link FROM course";
-                                $result = mysqli_query($conn, $sql);
+                                $result = mysqli_query($connection, $sql);
                                 
                                 if (mysqli_num_rows($result) > 0) {
                                 // output data of each row
@@ -148,15 +148,15 @@
                     $sql = "INSERT INTO course VALUES (null,'$fName', 
                         '$creator','$created','$duration','$link')";
                         
-                    if(mysqli_query($conn, $sql)){
+                    if(mysqli_query($connection, $sql)){
                         echo "<script>window.location.href = './course.php';</script>";
                     } else{
                         echo "ERROR: Hush! Sorry $sql. " 
-                            . mysqli_error($conn);
+                            . mysqli_error($connection);
                     }
                         
-                    // Close connection
-                    mysqli_close($conn);
+                    // Close connectionection
+                    mysqli_close($connection);
                 }
             ?>
         <?php

@@ -1,6 +1,7 @@
                 <?php
+                    include './config/db.php';
                     include './assets/utilities/nstudent.php';
-                    include './assets/function/db.php';
+
                 ?>
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
@@ -66,7 +67,7 @@
                             <?php
                                 // show data
                                 $sql = "SELECT id, fname, Email, Phone, EnrollNumber, AdmissionDate FROM students";
-                                $result = mysqli_query($conn, $sql);
+                                $result = mysqli_query($connection, $sql);
                                 
                                 if (mysqli_num_rows($result) > 0) {
                                 // output data of each row
@@ -93,7 +94,7 @@
                                     echo '<div class="alert alert-warning" role="alert">Sorry no data available</div>';
                                 }
                                 
-                                mysqli_close($conn);
+                                mysqli_close($connection);
 
                                 ?>
                                 </div>
@@ -111,7 +112,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="./assets/function/create.php" method="POST">
+                    <form action="./function/create.php" method="POST">
                         <div class="mb-3">
                             <label for="name" class="form-label">name</label>
                             <input type="text" name="name" class="form-control" id="" aria-describedby="Recipient's username" required>

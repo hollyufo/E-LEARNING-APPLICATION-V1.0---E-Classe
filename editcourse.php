@@ -1,11 +1,12 @@
 <?php
+                    include './config/db.php';
                     include './assets/utilities/fPayment.php';
-                    include './assets/function/db.php';
+ 
 
                     $course_id = $_GET['id'];
                     $update = true;
                     $sql = "SELECT * FROM course WHERE id=$course_id";
-                    $record = mysqli_query($conn, $sql);
+                    $record = mysqli_query($connection, $sql);
                     $row = mysqli_fetch_array($record, MYSQLI_ASSOC);
 
                 ?>
@@ -82,10 +83,10 @@
                         $duration = $_POST['duration'];
                         $link = $_POST['link'];
                             
-                        mysqli_query($conn, "UPDATE course SET cname='$fName', creator='$creator', duration='$duration', link='$link' WHERE id=$course_id");
+                        mysqli_query($connection, "UPDATE course SET cname='$fName', creator='$creator', duration='$duration', link='$link' WHERE id=$course_id");
                         
-                        // Close connection
-                        mysqli_close($conn);
+                        // Close connectionection
+                        mysqli_close($connection);
                         echo "<script>window.location.href = './course.php';</script>";
                     }
                 ?>

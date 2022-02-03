@@ -1,6 +1,6 @@
 <?php
-		include './assets/function/db.php';
+		include './config/db.php';
 		$student_id = $_GET['id'];
-		mysqli_query($conn, "DELETE FROM students WHERE id=$student_id");
+		mysqli_query($connection, "DELETE FROM students WHERE id=$student_id");
 		$_SESSION['message'] = "Address deleted!"; 
-		header('location: student.php');
+		echo "<script>window.location.href = './course.php';</script>";

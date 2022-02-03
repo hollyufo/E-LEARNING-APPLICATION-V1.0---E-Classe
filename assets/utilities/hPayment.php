@@ -16,7 +16,7 @@
                 <div class="sidebar-heading dtitle1">E-class</div>
                 <div class="list-group list-group-flush bg-1 admin-admin">
                     <img class="img-admin" src="./assets/img/pexels-photo-2379004 1.png" alt="admin img">
-                    <p class="p-admin">Admin name</p>
+                    <p class="p-admin"><?php echo $_SESSION['firstname']?> <?php echo $_SESSION['lastname']; ?></p>
                     <a href="#" class="mylink">Admin</a>
                 </div>
                 <div class="list-group list-group-flush bg-1 admin-admin">

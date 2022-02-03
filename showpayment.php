@@ -1,10 +1,11 @@
-<?php
+<?php 
+            include './config/db.php';
             include './assets/utilities/hPayment.php';
-            include './assets/function/db.php';
+            
             $student_id = $_GET['id'];
             $update = true;
             $sql = "SELECT * FROM payment_details WHERE id=$student_id";
-            $record = mysqli_query($conn, $sql);
+            $record = mysqli_query($connection, $sql);
             $row = mysqli_fetch_array($record, MYSQLI_ASSOC);
             ?>
             <!-- Page content wrapper-->
