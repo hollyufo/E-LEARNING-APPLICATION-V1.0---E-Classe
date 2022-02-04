@@ -26,7 +26,7 @@
                 <?php echo $activation_error; ?>
             </div>
             <p class="lead">If user account is verified then click on the following button to login.</p>
-            <a class="btn btn-lg btn-success" href="http://localhost/php-user-authentication/index.php"
+            <a class="btn btn-lg btn-success" href="http://e-class.imranechaibi.com//index.php"
                >Click to Login
             </a>
         </div>
