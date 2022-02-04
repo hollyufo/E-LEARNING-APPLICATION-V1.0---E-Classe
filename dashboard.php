@@ -1,7 +1,8 @@
 <?php include('config/db.php'); 
-if(!isset($_SESSION)){
-    echo "<script>window.location.href = './index.php';</script>";
-}
+            if(!$_SESSION['login']){
+                header("location:index.php");
+                die;
+             }
 include './assets/utilities/ndashboard.php';
 
 // for students

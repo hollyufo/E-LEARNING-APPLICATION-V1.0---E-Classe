@@ -61,6 +61,7 @@
                        $_SESSION['email'] = $email;
                        $_SESSION['mobilenumber'] = $mobilenumber;
                        $_SESSION['token'] = $token;
+                       $_SESSION['login'] = true;
 
                     } else {
                         $emailPwdErr = '<div class="alert alert-danger">

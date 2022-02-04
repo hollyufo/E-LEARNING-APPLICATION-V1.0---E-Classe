@@ -1,6 +1,10 @@
                 <?php
                     include './config/db.php';
                     include './assets/utilities/nstudent.php';
+                    if(!$_SESSION['login']){
+                        header("location:index.php");
+                        die;
+                     }
 
                 ?>
             <!-- Page content wrapper-->

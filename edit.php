@@ -1,7 +1,10 @@
                 <?php
                     include './config/db.php';
                     include './assets/utilities/nstudent.php';
-                    
+                    if(!$_SESSION['login']){
+                        header("location:index.php");
+                        die;
+                     }
 
                     $student_id = $_GET['id'];
                     $update = true;
