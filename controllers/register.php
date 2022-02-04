@@ -5,8 +5,7 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
     use PHPMailer\PHPMailer\SMTP;
-    // Swiftmailer lib
-    require_once './lib/vendor/autoload.php';
+    // Swiftmailer l
     
     // Error & success messages
     global $success_msg, $email_exist, $f_NameErr, $l_NameErr, $_emailErr, $_mobileErr, $_passwordErr;
@@ -117,13 +116,13 @@
                             $mail->isSMTP();                                            //Send using SMTP
                             $mail->Host       = 'smtp.hostinger.com';                     //Set the SMTP server to send through
                             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                            $mail->Username   = 'contact@imranechaibi.com';                     //SMTP username
+                            $mail->Username   = 'eclass@imranechaibi.com';                     //SMTP username
                             $mail->Password   = 'dataCRYPTO123';                               //SMTP password
                             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                             //Recipients
-                            $mail->setFrom('contact@imranechaibi.com', 'imranechaibi');
+                            $mail->setFrom('eclass@imranechaibi.com', 'imranechaibi');
                             $mail->addAddress($email, 'Eclass team');     //Add a recipient
                             //$mail->addAddress('ellen@example.com');               //Name is optional
                             //$mail->addReplyTo('info@example.com', 'Information');
