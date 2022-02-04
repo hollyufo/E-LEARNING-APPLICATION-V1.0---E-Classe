@@ -1,6 +1,6 @@
             <?php
+             include './config/db.php';
             include './assets/utilities/hPayment.php';
-            include './assets/function/db.php';
             ?>
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
@@ -63,7 +63,7 @@
                         <?php
                                 // show data
                                 $sql = "SELECT id, fname, PaymentSchedule, BillNumber, 	AmountPaid, Blanaceamount, tDate FROM payment_details";
-                                $result = mysqli_query($conn, $sql);
+                                $result = mysqli_query($connection, $sql);
                                 
                                 if (mysqli_num_rows($result) > 0) {
                                 // output data of each row
@@ -154,15 +154,15 @@
                     $sql = "INSERT INTO payment_details VALUES (null,'$fName', 
                         '$paiment','$bill','$AmountPaid','$Blanaceamount','$Date')";
                         
-                    if(mysqli_query($conn, $sql)){
+                    if(mysqli_query($connection, $sql)){
                         echo "<script>window.location.href = './payment.php';</script>";
                     } else{
                         echo "ERROR: Hush! Sorry $sql. " 
-                            . mysqli_error($conn);
+                            . mysqli_error($connection);
                     }
                         
-                    // Close connection
-                    mysqli_close($conn);
+                    // Close connectionection
+                    mysqli_close($connection);
                 }
             ?>
         <?php

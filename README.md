@@ -1,10 +1,21 @@
-# E-LEARNING APPLICATION V1.0 : E-Classe
- 
-## Votre équipe de désigne vient de terminer la maquette de l'application E-Classe. En tant que développeur polyvalent, votre mission est d'intégrer la maquette avec un framework CSS de votre choix ainsi d'appliquer le principe **DRY **via le language PHP. Vous devez, donc, répondre aux histoires suivants :
+# php-user-authentication
 
-### Autant que intégrateur web, je peux réliser l'interface utilisateur statique et adaptable de la maquette fournie par votre équipe désigners avec un **framework **CSS (Bootstrap 5, Tailwind CSS).
-- Autant que intégrateur web, je peux m'assurer que l'interface est accessible.
-- Autant que intégrateur web, je peux m'assurer que le code est validé via les outils W3C.
-- Autant que Développeur PHP, je peux découper les élements (Sidebar, Header et Footer) en des composants PHP.
-- Autant que Développeur PHP, je peux stocker la liste des étudiants en un seul tableau associatif et les itérer dans la page web Students.
-- Autant que Développeur PHP, je peux stocker les détails des payements en un seul tableau associatif et les itérer dans la page web Payement.
+Build PHP 7 user authentication and login system with MySQL and Bootstrap 4 using procedural programming approach.
+
+[Build Login and User Authentication System with PHP 7 and MySQL](https://www.positronx.io/build-php-mysql-login-and-user-authentication-system/)
+
+## User Registration & Login System Features
+* Connecting MySQL database with PHP project
+* Building user registration form with Bootstrap
+* PHP server-side validation
+* Handling error messages
+* Securely hash password
+* Sending verification mail with SwiftMailer
+
+## Login System
+* Build login form with Bootstrap
+* Password verification
+* Storing data in session
+* Allowing access to only verified users
+* Display user data to logged-in users
+* Building logout
