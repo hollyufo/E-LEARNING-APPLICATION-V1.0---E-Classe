@@ -57,13 +57,12 @@ if(isset($_POST["reset"])){
                     //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
                     $mail->send();
-                    header('Location: ./index.php');
                 } catch (Exception $e) {
                     // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                 }
     }
     else{
-        $message_erro='<div class="alert alert-success"> Sorry! no account associated with this email </div>';
+        $message_erro='<div class="alert alert-danger"> Sorry! no account associated with this email </div>';
     }
 }
 ini_set('display_errors', 1);

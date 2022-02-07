@@ -18,11 +18,17 @@
             <h2 class="ctitile2">Reset your password</h2>
             <p class="cpara">Enter your new password</p>
             <form name="form" class="form1" method = "POST">
+                <?php echo $message_success ?>
+                <?php echo $message ?>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label labale1">Email</label>
-                    <input name="password" id="email_signin" type="text" class="form-control input1" placeholder="Enter your email">
+                    <input name="password1" id="email_signin" type="text" class="form-control input1" placeholder="Enter your email">
                 </div>
-                <button type="submit" name="reset" id="sign_in" class="btn btn-color">Send reset password</button>                
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label labale1">Email</label>
+                    <input name="password2" id="email_signin" type="text" class="form-control input1" placeholder="Enter your email">
+                </div>
+                <button type="submit" name="reset" id="sign_in" class="btn btn-color">reset password</button>                
             </form>
         </div>
     </div>
