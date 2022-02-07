@@ -2,7 +2,11 @@
    
     // Database connection
     include('config/db.php');
-
+    // to send user to the dashboard page if he is logged in already
+    if(isset($_SESSION['login'])){
+        header("Location: dashboard.php");
+    };
+                
     global $wrongPwdErr, $accountNotExistErr, $emailPwdErr, $verificationRequiredErr, $email_empty_err, $pass_empty_err;
 
     if(isset($_POST['login'])) {
@@ -62,6 +66,7 @@
                        $_SESSION['mobilenumber'] = $mobilenumber;
                        $_SESSION['token'] = $token;
                        $_SESSION['login'] = true;
+                       $_SESSION['timestamp'] = time();
 
                     } else {
                         $emailPwdErr = '<div class="alert alert-danger">

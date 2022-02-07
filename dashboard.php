@@ -4,6 +4,7 @@
                 die;
              }
 include './assets/utilities/ndashboard.php';
+include './controllers/time.php';
 
 // for students
 $sql="SELECT * FROM students";
