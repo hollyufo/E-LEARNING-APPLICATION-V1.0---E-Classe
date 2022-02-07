@@ -11,29 +11,24 @@
 </head>
 <body>
         <!-- Login script -->
-        <?php include('./controllers/login.php'); ?>
+        <?php include('./controllers/reset.php'); ?>
     <div class="mycontainer">
         <div class="card">
             <h1 class="ctitle1">E-class</h1>
             <h2 class="ctitile2">SIGN IN</h2>
             <p class="cpara">Enter your credentials to access your account</p>
-            <form name="form" action="" class="form1" onsubmit = "return validation()" method = "POST">
+            <form name="form" action="./controllers/reset.php" class="form1" method = "POST">
             <?php echo $accountNotExistErr; ?>
                     <?php echo $emailPwdErr; ?>
                     <?php echo $verificationRequiredErr; ?>
                     <?php echo $email_empty_err; ?>
-                    <?php echo $pass_empty_err; ?>
+                    <?php echo $message_success; ?>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label labale1">Email</label>
                     <input name="email_signin" id="email_signin" type="text" class="form-control input1" placeholder="Enter your email">
                 </div>
-                <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label labale1">Password</label>
-                    <input name="password_signin" id="password_signin" type="password" class="form-control input1" id="formGroupExampleInput2" placeholder="Enter your password">
-                </div>
-                <button type="submit" name="login" id="sign_in" class="btn btn-color">SIGN IN</button>                
+                <button type="submit" name="reset" id="sign_in" class="btn btn-color">Send reset password</button>                
             </form>
-            <p class="cpara2">Forgot your password? <a href="./resetpassword" class="mylink">Reset Password</a></p>
             <p class="cpara2">Don't have an account ?<a href="./signup.php" class="mylink">Create one</a></p>
         </div>
     </div>
