@@ -19,6 +19,7 @@
             <p class="cpara">Enter your email to recover your account</p>
             <form name="form" class="form1" method = "POST">
                     <?php echo $message_success; ?>
+                    <?php echo $message; ?>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label labale1">Email</label>
                     <input name="email_signin" id="email_signin" type="text" class="form-control input1" placeholder="Enter your email">
