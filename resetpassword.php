@@ -15,8 +15,8 @@
     <div class="mycontainer">
         <div class="card">
             <h1 class="ctitle1">E-class</h1>
-            <h2 class="ctitile2">SIGN IN</h2>
-            <p class="cpara">Enter your credentials to access your account</p>
+            <h2 class="ctitile2">Reset your password</h2>
+            <p class="cpara">Enter your email to recover your account</p>
             <form name="form" action="" class="form1" method = "POST">
                     <?php echo $message_success; ?>
                 <div class="mb-3">

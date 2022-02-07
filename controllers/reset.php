@@ -3,6 +3,7 @@ include("./config/db.php");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
+$message_success ="";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $email_reg=mysqli_real_escape_string($connection,$_POST['reset']);
