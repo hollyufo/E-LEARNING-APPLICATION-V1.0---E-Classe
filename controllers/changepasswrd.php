@@ -26,6 +26,7 @@
                 mysqli_query($connection,"DELETE FROM forget_password where email='$email' and temp_key='$key'");
                 //update password in database
                 mysqli_query($connection,"UPDATE users set password='$password_hash' where email='$email'");
+                header('location:index.php');
             }
             else{
                 $message='<div class="alert alert-success">Your Passwords dont match </div>';

@@ -25,11 +25,11 @@
                 <?php echo $message ?>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label labale1">Email</label>
-                    <input name="password1" id="email_signin" type="text" class="form-control input1" placeholder="Enter your email">
+                    <input name="password1" id="email_signin" type="password" class="form-control input1" placeholder="Enter your email">
                 </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label labale1">Email</label>
-                    <input name="password2" id="email_signin" type="text" class="form-control input1" placeholder="Enter your email">
+                    <input name="password2" id="email_signin" type="password" class="form-control input1" placeholder="Enter your email">
                 </div>
                 <button type="submit" name="reset" id="sign_in" class="btn btn-color">reset password</button>                
             </form>
