@@ -21,11 +21,11 @@
             $password2=mysqli_real_escape_string($connection,$_POST['password2']);
             if ($password2==$password1) {
                 $message_success="New password has been set for ".$email;
-                $password= password_hash($password, PASSWORD_BCRYPT);
+                $password_hash= password_hash($password1, PASSWORD_BCRYPT);
                 //destroy the key from table
                 mysqli_query($connection,"DELETE FROM forget_password where email='$email' and temp_key='$key'");
                 //update password in database
-                mysqli_query($connection,"UPDATE users set password='$password' where email='$email'");
+                mysqli_query($connection,"UPDATE users set password='$password_hash' where email='$email'");
             }
             else{
                 $message='<div class="alert alert-success">Your Passwords dont match </div>';
