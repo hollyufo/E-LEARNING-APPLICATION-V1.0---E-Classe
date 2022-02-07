@@ -52,7 +52,7 @@ if(isset($_POST["reset"])){
                     //Content
                     $mail->isHTML(true);                                  //Set email format to HTML
                     $mail->Subject = $subject;
-                    $mail->Body    = $email."<br>".$msg;
+                    $mail->Body    = $email_reg."<br>".$msg;
                     //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
                     $mail->send();
