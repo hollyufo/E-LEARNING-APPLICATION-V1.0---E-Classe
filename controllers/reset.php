@@ -4,7 +4,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 $message_success ="";
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if(isset($_POST["reset"])){
 
     $email_reg=mysqli_real_escape_string($connection,$_POST['reset']);
     $details=mysqli_query($connection,"SELECT firstname,email FROM users WHERE email='$email_reg'");
