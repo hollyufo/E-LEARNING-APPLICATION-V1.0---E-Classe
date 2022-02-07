@@ -17,7 +17,7 @@
             <h1 class="ctitle1">E-class</h1>
             <h2 class="ctitile2">Reset your password</h2>
             <p class="cpara">Enter your email to recover your account</p>
-            <form name="form" action="" class="form1" method = "POST">
+            <form name="form" class="form1" method = "POST">
                     <?php echo $message_success; ?>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label labale1">Email</label>
