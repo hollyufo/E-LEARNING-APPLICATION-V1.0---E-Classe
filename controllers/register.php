@@ -122,7 +122,7 @@
 
                             //Recipients
                             $mail->setFrom('e-class@imranechaibi.com', 'imranechaibi');
-                            $mail->addAddress($email, 'E-class team');     //Add a recipient
+                            $mail->addAddress($email, 'E-   class team');     //Add a recipient
                             //$mail->addAddress('ellen@example.com');               //Name is optional
                             //$mail->addReplyTo('info@example.com', 'Information');
                             //$mail->addCC('cc@example.com');

@@ -16,7 +16,7 @@ if(isset($_POST["reset"])){
         $sql_insert=mysqli_query($connection,"INSERT INTO forget_password(email,temp_key) VALUES('$email_reg','$key')");
         //sending email about update
         $subject = 'Changing password e-class';
-        $msg = "Please copy the link and paste in your browser address bar". "\r\n"."http://e-class.imranechaibi.com/recoverpassword.php?key=".$key;
+        $msg = "Please copy the link and paste in your browser address bar". "\r\n"."http://e-class.imranechaibi.com/recoverpassword.php?key=".$key."&email=".$email_reg;
         // here new code
                     require './PHPMailer/src/Exception.php';
                     require './PHPMailer/src/PHPMailer.php';
