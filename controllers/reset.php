@@ -4,6 +4,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 $message_success ="";
+$message_erro = "";
 if(isset($_POST["reset"])){
 
     $email_reg=mysqli_real_escape_string($connection,$_POST['email_signin']);
@@ -62,7 +63,7 @@ if(isset($_POST["reset"])){
                 }
     }
     else{
-        $message="Sorry! no account associated with this email";
+        $message_erro='<div class="alert alert-success"> Sorry! no account associated with this email </div>';
     }
 }
 ini_set('display_errors', 1);
