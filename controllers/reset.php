@@ -1,12 +1,11 @@
 <?php
 include("./config/db.php");
-session_start();
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    $email_reg=mysqli_real_escape_string($connection,$_POST['email']);
+    $email_reg=mysqli_real_escape_string($connection,$_POST['reset']);
     $details=mysqli_query($connection,"SELECT firstname,email FROM users WHERE email='$email_reg'");
     if (mysqli_num_rows($details)>0) { //if the given email is in database, ie. registered
         $message_success='<div class="alert alert-success"> Please check your email inbox or spam folder and follow the steps </div>';

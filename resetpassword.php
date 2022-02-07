@@ -17,11 +17,7 @@
             <h1 class="ctitle1">E-class</h1>
             <h2 class="ctitile2">SIGN IN</h2>
             <p class="cpara">Enter your credentials to access your account</p>
-            <form name="form" action="./controllers/reset.php" class="form1" method = "POST">
-            <?php echo $accountNotExistErr; ?>
-                    <?php echo $emailPwdErr; ?>
-                    <?php echo $verificationRequiredErr; ?>
-                    <?php echo $email_empty_err; ?>
+            <form name="form" action="" class="form1" method = "POST">
                     <?php echo $message_success; ?>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label labale1">Email</label>
