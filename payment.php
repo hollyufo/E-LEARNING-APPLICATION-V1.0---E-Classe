@@ -5,6 +5,7 @@
                 header("location:index.php");
                 die;
              }
+             include './controllers/time.php';
             ?>
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">

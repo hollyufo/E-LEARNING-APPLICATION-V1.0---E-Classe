@@ -4,7 +4,8 @@
             if(!$_SESSION['login']){
                 header("location:index.php");
                 die;
-             }
+             };
+             include './controllers/time.php';
             
             $student_id = $_GET['id'];
             $update = true;
