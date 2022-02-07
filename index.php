@@ -34,6 +34,7 @@
                 <button type="submit" name="login" id="sign_in" class="btn btn-color">SIGN IN</button>                
             </form>
             <p class="cpara2">Forgot your password? <a href="#" class="mylink">Reset Password</a></p>
+            <p class="cpara2">Don't have an account ?<a href="./signup.php" class="mylink">Create one</a></p>
         </div>
     </div>
 
