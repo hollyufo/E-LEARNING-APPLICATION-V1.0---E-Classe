@@ -2,5 +2,4 @@
     session_start();
     session_destroy();
       
-    header("Location: http://e-class.imranechaibi.com/index.php")
-;?>
+    header("Location: http://e-class.imranechaibi.com/index.php");?>

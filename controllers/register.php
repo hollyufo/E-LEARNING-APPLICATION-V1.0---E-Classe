@@ -120,6 +120,8 @@
                             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
+
+                            $mail->addCustomHeader('Sender ID', 'e-class@imranechaibi.com');
                             //Recipients
                             $mail->setFrom('e-class@imranechaibi.com', 'imranechaibi');
                             $mail->addAddress($email, 'E-   class team');     //Add a recipient

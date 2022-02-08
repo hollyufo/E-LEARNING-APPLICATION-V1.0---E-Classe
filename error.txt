@@ -1,0 +1,94 @@
+ am now sharing some of the spam reports:
+Content Rejected
+2022-02-07 10:59 AM
+Sender ID:
+686868883
+From: <>
+To:
+e-class@imranechaibi.com
+Subject: Undelivered Mail Returned to Sender
+Content Rejected
+2022-02-07 10:59 AM
+Sender ID:
+686868883
+From: <>
+To:
+e-class@imranechaibi.com
+Subject: Undelivered Mail Returned to Sender
+Content Rejected
+2022-02-07 10:59 AM
+Sender ID:
+686868883
+From: <>
+To:
+e-class@imranechaibi.com
+Subject: Undelivered Mail Returned to Sender
+Content Rejected
+2022-02-07 10:59 AM
+Sender ID:
+686868883
+From: <>
+To:
+e-class@imranechaibi.com
+Subject: Undelivered Mail Returned to Sender
+Content Rejected
+2022-02-07 10:59 AM
+Sender ID:
+686868883
+From: <>
+To:
+e-class@imranechaibi.com
+Subject: Undelivered Mail Returned to Sender
+Content Rejected
+2022-02-07 10:59 AM
+Sender ID:
+686868883
+From: <>
+To:
+e-class@imranechaibi.com
+Subject: Undelivered Mail Returned to Sender
+Content Rejected
+2022-02-07 10:59 AM
+Sender ID:
+686868883
+From: <>
+To:
+e-class@imranechaibi.com
+Subject: Undelivered Mail Returned to Sender
+Content Rejected
+2022-02-07 10:59 AM
+Sender ID:
+686868883
+From: <>
+To:
+e-class@imranechaibi.com
+Subject: Undelivered Mail Returned to Sender
+Content Rejected
+2022-02-07 10:59 AM
+Sender ID:
+686868883
+From: <>
+To:
+e-class@imranechaibi.com
+Subject: Undelivered Mail Returned to Sender
+Content Rejected
+2022-02-07 10:59 AM
+Sender ID:
+686868883
+From: <>
+To:
+e-class@imranechaibi.com
+Subject: Undelivered Mail Returned to Sender
+Content Rejected
+2022-02-07 10:59 AM
+Sender ID:
+686868883
+From: <>
+To:
+e-class@imranechaibi.com
+Subject: Undelivered Mail Returned to Sender
+I'll explain then what these reports mean 😊
+If you look closely at each report, they all have the same "SENDER ID" which is 686868883👈
+That "sender ID" is what causes your emails to be marked as SPAM, since the security filter detects it as dangerous, since the "Sender ID" should be shown as an email; For example "myemail@mail.com" but it is like that and it is shown as 686868883
+This happens because on your web page you have a contact form or PHP form which is incorrectly configured.
+To solve it you must correct and optimize the code or configuration of the web form of your page or simply eliminate the contact form; This will solve your spam and email deactivation problem 
