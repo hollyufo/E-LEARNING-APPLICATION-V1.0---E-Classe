@@ -29,7 +29,7 @@
                 header('location:index.php');
             }
             else{
-                $message='<div class="alert alert-success">Your Passwords dont match </div>';
+                $message='<div class="alert alert-danger">Your Passwords dont match </div>';
             }
     }
             
