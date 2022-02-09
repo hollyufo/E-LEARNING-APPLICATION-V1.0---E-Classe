@@ -113,21 +113,20 @@
                             //Server settings
                             $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
                             $mail->isSMTP();                                            //Send using SMTP
-                            $mail->Host       = 'smtp.hostinger.com';                     //Set the SMTP server to send through
+                            $mail->Host       = 'smtp..com';                     //Set the SMTP server to send through
                             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                            $mail->Username   = 'e-class@imranechaibi.com';                     //SMTP username
-                            $mail->Password   = 'dataCRYPTO123@';                               //SMTP password
+                            $mail->Username   = '@imranechaibi.com';                     //SMTP username
+                            $mail->Password   = '';                               //SMTP password
                             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-                            $mail->From = 'e-class@imranechaibi.com';
-                            $mail->Sender = 'e-class@imranechaibi.com';
-                            $mail->addCustomHeader('Sender ID', 'e-class@imranechaibi.com');
+                            $mail->From = '@imranechaibi.com';
+                            $mail->Sender = '@imranechaibi.com';
                             //Recipients
-                            $mail->setFrom('e-class@imranechaibi.com', 'imranechaibi');
+                            $mail->setFrom('@imranechaibi.com', 'imranechaibi');
                             $mail->addAddress($email, 'E-class team');     //Add a recipient
                             //$mail->addAddress('ellen@example.com');               //Name is optional
-                            $mail->addReplyTo('e-class@imranechaibi.com', 'imrane chaibi');
+                            $mail->addReplyTo('@imranechaibi.com', 'imrane chaibi');
                             //$mail->addCC('cc@example.com');
                             //$mail->addBCC('bcc@example.com');
 
