@@ -20,7 +20,7 @@
             <h1 class="display-4">User Email Verification</h1>
             <div class="col-12 mb-5 text-center">
             </div>
-            <p class="lead"><div class="alert alert-success"> This url is invalid or already been used. Please verify and try again. </div>.</p>
+            <p class="lead"><div class="alert alert-danger"> This url is invalid or already been used. Please verify and try again. </div>.</p>
             <a class="btn btn-lg btn-success" href="http://e-class.imranechaibi.com"
                >home page
             </a>
