@@ -37,13 +37,15 @@ if(isset($_POST["reset"])){
                     $mail->Password   = 'dataCRYPTO123@';                               //SMTP password
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
+                    
+                    $mail->From = 'e-class@imranechaibi.com';
+                    $mail->Sender = 'e-class@imranechaibi.com';
                     $mail->addCustomHeader('Sender ID', 'e-class@imranechaibi.com');
                     //Recipients
                     $mail->setFrom('e-class@imranechaibi.com', 'imranechaibi');
                     $mail->addAddress($email_reg, 'Eclass team');     //Add a recipient
                     //$mail->addAddress('ellen@example.com');               //Name is optional
-                    //$mail->addReplyTo('info@example.com', 'Information');
+                    $mail->addReplyTo('e-class@imranechaibi.com', 'imrane chaibi');
                     //$mail->addCC('cc@example.com');
                     //$mail->addBCC('bcc@example.com');
 
