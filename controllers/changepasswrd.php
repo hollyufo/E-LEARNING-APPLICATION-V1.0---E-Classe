@@ -8,7 +8,7 @@
         $check=mysqli_query($connection,"SELECT * FROM forget_password WHERE email='$email' and temp_key='$key'");
         //if key doesnt matches
         if (mysqli_num_rows($check)!=1) {
-        echo '<div class="alert alert-success"> This url is invalid or already been used. Please verify and try again. </div>';
+            header('location: usedverification.php');
         exit;
         }
     }
