@@ -8,6 +8,7 @@
         <title>Students</title>
         <link href="./assets/css/admin.css" rel="stylesheet" />
         <link rel="stylesheet" href="./assets/css/student.css">
+        <script src="./assets/js/passvalidation.js"></script>
     </head>
     <body class="color12">
         <div class="d-flex" id="wrapper">

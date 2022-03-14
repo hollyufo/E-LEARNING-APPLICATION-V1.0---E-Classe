@@ -113,20 +113,20 @@
                             //Server settings
                             $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
                             $mail->isSMTP();                                            //Send using SMTP
-                            $mail->Host       = 'smtp..com';                     //Set the SMTP server to send through
+                            $mail->Host       = 'smtp.hostinger.com';                     //Set the SMTP server to send through
                             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                            $mail->Username   = '@imranechaibi.com';                     //SMTP username
-                            $mail->Password   = '';                               //SMTP password
+                            $mail->Username   = 'contact@imranechaibi.com';                     //SMTP username
+                            $mail->Password   = 'hola1234HOLA@#';                               //SMTP password
                             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-                            $mail->From = '@imranechaibi.com';
-                            $mail->Sender = '@imranechaibi.com';
+                            $mail->From = 'contact@imranechaibi.com';
+                            $mail->Sender = 'contact@imranechaibi.com';
                             //Recipients
-                            $mail->setFrom('@imranechaibi.com', 'imranechaibi');
+                            $mail->setFrom('contact@imranechaibi.com', 'imranechaibi');
                             $mail->addAddress($email, 'E-class team');     //Add a recipient
                             //$mail->addAddress('ellen@example.com');               //Name is optional
-                            $mail->addReplyTo('@imranechaibi.com', 'imrane chaibi');
+                            $mail->addReplyTo('contact@imranechaibi.com', 'imrane chaibi');
                             //$mail->addCC('cc@example.com');
                             //$mail->addBCC('bcc@example.com');
 
@@ -141,7 +141,7 @@
                             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
                             $mail->send();
-                            header('Location: ./index.php');
+                            header('Location: ./accountcreated.php');
                         } catch (Exception $e) {
                             // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                         }
