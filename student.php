@@ -6,9 +6,11 @@
                         die;
                      };
                      include './controllers/time.php';
+                     
 
                 ?>
             <!-- Page content wrapper-->
+
             <div id="page-content-wrapper">
                 <!-- Top navigation-->
                 <nav class="navbar navbar-expand-lg bg-12">
@@ -139,7 +141,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="./function/create.php" method="POST" onsubmit="return Studentvalidation()">
+                    <form id="form" action="./function/create.php" method="POST">
+                        <div id="error" style="color: red;"></div>
                         <div class="mb-3">
                             <label for="name" class="form-label">name</label>
                             <input type="text" name="name" class="form-control" id="name" aria-describedby="Recipient's username" >
