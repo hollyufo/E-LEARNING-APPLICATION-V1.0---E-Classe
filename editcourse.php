@@ -74,6 +74,7 @@
                                 <input type="link" name="link" class="form-control" id="" aria-describedby="Recipient's username" value="<?php echo $row['link']; ?>" required>
                             </div>
                             <input class="btn btn-primary" type="submit" name="save" value="Save">
+                            <a href="./course.php" class="btn btn-dark">Cancel</a>
                             
                         </div>
                     </div>
@@ -91,7 +92,7 @@
                         
                         // Close connectionection
                         mysqli_close($connection);
-                        echo "<script>window.location.href = './course.php';</script>";
+                        header('location: course.php?edit=true');
                     }
                 ?>
         <?php

@@ -13,7 +13,7 @@ if(isset($_POST['save'])){
         '$Email','$Phone','$Enrollnumber','$dateofadmin')";
         
     if(mysqli_query($connection, $sql)){
-        header('location: ./../student.php');
+        header('location: ./../student.php?add=true');
     } else{
         echo "ERROR: Hush! Sorry $sql. " 
             . mysqli_error($conn);
@@ -22,7 +22,7 @@ if(isset($_POST['save'])){
     // Close connection
     mysqli_close($conn);
     }else{
-        header('location: ./../student.php');
+        header('location: ./../student.php?message=true');
     }
 
 ?>

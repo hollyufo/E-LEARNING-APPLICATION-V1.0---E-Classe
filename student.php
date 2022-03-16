@@ -71,7 +71,16 @@
                               </tr>
                             </thead>
                             <tbody>
+                                
                             <?php
+                                
+                                if(isset($_GET['add'])){
+                                    echo '<div class="alert alert-success" role="alert">User was added successfully</div>';
+                                }elseif (isset($_GET['delete'])) {
+                                    echo '<div class="alert alert-info" role="alert">User was deleted successfully</div>';
+                                }elseif(isset($_GET['edit'])){
+                                    echo '<div class="alert alert-success" role="alert">All changes are saved successfully</div>';
+                                }
                                 // show data
                                 $sql = "SELECT id, fname, Email, Phone, EnrollNumber, AdmissionDate FROM students";
                                 $result = mysqli_query($connection, $sql);
@@ -98,7 +107,7 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                           </div>
                                           <div class="modal-body">
-                                            are u sure u want to delet '.$student['fname'].' ?  <br> this action is irreversible.
+                                            are u sure u want to delete '.$student['fname'].' ?  <br> this action is irreversible.
                                           </div>
                                           <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -141,7 +150,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="form" action="./function/create.php" method="POST">
+                    <form id='addd' method="post" action="./function/create.php">
                         <div id="error" style="color: red;"></div>
                         <div class="mb-3">
                             <label for="name" class="form-label">name</label>
@@ -149,7 +158,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="Email1" class="form-label">Email address</label>
-                            <input type="email" name="Email" class="form-control" id="email" aria-describedby="emailHelp" >
+                            <input type="email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" >
                         </div>
                         <div class="mb-3">
                             <label for="phone" class="form-label">Phone</label>
@@ -164,7 +173,7 @@
                             <input type="date" name="dateofadmission" class="form-control" id="date" aria-describedby="Recipient's username" >
                         </div>
                         
-                        <input class="btn btn-primary" type="submit" name="save" value="Save">
+                        <input class="btn btn-primary" id="add" type="submit" name="save" value="Save">
                         
                     </form>
                 </div>
@@ -178,3 +187,4 @@
         <?php
             include './assets/utilities/fdashboard.php'; 
         ?>
+        

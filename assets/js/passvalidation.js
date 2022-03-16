@@ -1,7 +1,7 @@
 const fname = document.getElementById('name')
-const email = document.getElementById('email')
+const email = document.getElementById('Email')
 const phone = document.getElementById('phone')
-const form = document.getElementById('form')
+const form = document.getElementById('addd')
 const enrollnum = document.getElementById('enrollnum');
 const date = document.getElementById('date')
 const errorElement = document.getElementById('error')
@@ -14,7 +14,7 @@ form.addEventListener('submit', (e) => {
   if (email.value === '' || email.value == null ) {
     messages.push('email is required')
   }
-  if (phone.value === '' || phone.value == null ) {
+ if (phone.value === '' || phone.value == null ) {
     messages.push('phone is required')
   }
   if (enrollnum.value === '' || enrollnum.value == null ) {
@@ -28,3 +28,4 @@ form.addEventListener('submit', (e) => {
     errorElement.innerText = messages.join(', ')
   }
 })
+

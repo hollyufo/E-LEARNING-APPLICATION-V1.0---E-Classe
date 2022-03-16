@@ -65,6 +65,13 @@
                         </thead>
                         <tbody>
                         <?php
+                                if(isset($_GET['add'])){
+                                    echo '<div class="alert alert-success" role="alert">Course was added successfully</div>';
+                                }elseif (isset($_GET['delete'])) {
+                                    echo '<div class="alert alert-info" role="alert">Course was deleted successfully</div>';
+                                }elseif(isset($_GET['edit'])){
+                                    echo '<div class="alert alert-success" role="alert">All changes are saved successfully</div>';
+                                }
                                 // show data
                                 $sql = "SELECT id, cname, creator, created,  duration,  link FROM course";
                                 $result = mysqli_query($connection, $sql);
@@ -177,7 +184,7 @@
                         '$creator','$created','$duration','$link')";
                         
                     if(mysqli_query($connection, $sql)){
-                        echo "<script>window.location.href = './course.php';</script>";
+                        header('location: course.php?add=true');
                     } else{
                         echo "ERROR: Hush! Sorry $sql. " 
                             . mysqli_error($connection);

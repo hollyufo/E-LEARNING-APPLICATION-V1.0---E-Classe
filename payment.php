@@ -66,6 +66,9 @@
                         </thead>
                         <tbody>
                         <?php
+                                if(isset($_GET['add'])){
+                                    echo '<div class="alert alert-success" role="alert">Payment was added successfully</div>';
+                                }
                                 // show data
                                 $sql = "SELECT id, fname, PaymentSchedule, BillNumber, 	AmountPaid, Blanaceamount, tDate FROM payment_details";
                                 $result = mysqli_query($connection, $sql);
@@ -160,7 +163,7 @@
                         '$paiment','$bill','$AmountPaid','$Blanaceamount','$Date')";
                         
                     if(mysqli_query($connection, $sql)){
-                        echo "<script>window.location.href = './payment.php';</script>";
+                        header('location: payment.php?add=true');
                     } else{
                         echo "ERROR: Hush! Sorry $sql. " 
                             . mysqli_error($connection);

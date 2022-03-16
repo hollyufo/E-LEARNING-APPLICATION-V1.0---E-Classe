@@ -76,6 +76,7 @@
                         </div>
                         
                         <input class="btn btn-primary" type="submit" class="btn btn-primary" name="save" value="Save">
+                        <a href="./student.php" class="btn btn-dark">Cancel</a>
                         </div>
 
                         
@@ -94,7 +95,7 @@
                         $dateofadmin = $_POST['dateofadmission'];
                         mysqli_query($connection, "UPDATE students SET fName='$fName', Email='$Email', fName='$fName', EnrollNumber='$Enrollnumber', AdmissionDate='$dateofadmin' WHERE id=$student_id");
                         $_SESSION['message'] = "Address updated!"; 
-                        echo "<script>window.location.href = './student.php';</script>";
+                        echo "<script>window.location.href = './student.php?edit=true';</script>";
                         
 
                     }
