@@ -1,21 +1,22 @@
-# php-user-authentication
+# Project context
+### Vous êtes un développeur backend, votre équipe a besoin de vous pour développer le backend du login de l'application web E-Classe.
 
-Build PHP 7 user authentication and login system with MySQL and Bootstrap 4 using procedural programming approach.
+##### Vous devez, donc, répondre aux histoires suivantes :
 
-[Build Login and User Authentication System with PHP 7 and MySQL](https://www.positronx.io/build-php-mysql-login-and-user-authentication-system/)
+- Autant que Développeur backend PHP, je peux modifier la base de donnéer en ajoutant la table "comptes" contenant les données des utilisateurs de l'application.
+- Autant que Développeur backend PHP, je peux m'assurer que le formulaire est valide avant d'intérroger la base de donnée.
+- Autant que Développeur backend PHP, je peux m'assurer que l'utilisateur est informé que l'authentification a echoué lorsqu'il fournit des infomation incorrectes, ainsi le garder dans la page d'authentification.
+- Autant que Développeur backend PHP, je peux m'assurer que l'utilisateur est redirigé vers le dashboard lorsque l'authentification passe avec succès.
+- Autant que Développeur backend PHP, je peux m'assurer de donner le choix d'enregistrer les informations de connection afin qu'il puisse utiliser la fonction d'auto saisie lorsqu'il essay de se connecter.
+- Autant que Développeur backend PHP, je peux m'assurer que le utilisateur est connecté pendant 24 heures avant que l'application lui demande à nouveaux de s'authentifier.
+- Autant que Développeur backend PHP, je peux m'assurer que nom d'utilisateur remplace le nom générique **admin name **dans la maquette.
+- Autant que Développeur backend PHP, je peux m'assurer que l'authentification est sécurisé (optionnel).
+- Autant que Développeur backend PHP, je peux créer une base de données nommée e_classe_db
+- Autant que Développeur backend PHP, je peux connecter ma base de données avec l'application web E-Classe.
+- Autant que Développeur backend PHP, je peux ajouter trois tables students, courses et payment_details.
+- Autant que Développeur backend PHP, je peux appliquer le système CRUD (ajouter, afficher, modifier et supprimer) d'une manière dynamique sur les deux tables students et courses.
+- Autant que Développeur backend PHP, je peux ajouter et afficher seulement les données de la table payment_details.
+- Autant que Visiteur de l'application, je peux voir les cartes de statistiques sont dynamiques sur la page Dashboard.
+- Autant que Développeur backend PHP, je peux m'assurer que l'accéss à la base de données est sécurisé (optionnel).
 
-## User Registration & Login System Features
-* Connecting MySQL database with PHP project
-* Building user registration form with Bootstrap
-* PHP server-side validation
-* Handling error messages
-* Securely hash password
-* Sending verification mail with SwiftMailer
-
-## Login System
-* Build login form with Bootstrap
-* Password verification
-* Storing data in session
-* Allowing access to only verified users
-* Display user data to logged-in users
-* Building logout
+###### check branches for mor information.
