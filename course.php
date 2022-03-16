@@ -65,6 +65,7 @@
                         </thead>
                         <tbody>
                         <?php
+                                // to display the crud operation message
                                 if(isset($_GET['add'])){
                                     echo '<div class="alert alert-success" role="alert">Course was added successfully</div>';
                                 }elseif (isset($_GET['delete'])) {
