@@ -65,7 +65,8 @@
                           </tr>
                         </thead>
                         <tbody>
-                        <?php
+                        <?php   
+                                // display messag for crud operation
                                 if(isset($_GET['add'])){
                                     echo '<div class="alert alert-success" role="alert">Payment was added successfully</div>';
                                 }
