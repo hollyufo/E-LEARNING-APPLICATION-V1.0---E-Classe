@@ -8,10 +8,7 @@
         session_start();
     }
 
-    // $hostname = "localhost";
-    // $username = "u993746928_eclass";
-    // $password = "eclass123DASH";
-    // $dbname = "u993746928_e_classe_db";
+
 
      $hostname = "localhost";
      $username = "root";
