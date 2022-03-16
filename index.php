@@ -17,6 +17,11 @@
             <h1 class="ctitle1">E-class</h1>
             <h2 class="ctitile2">SIGN IN</h2>
             <p class="cpara">Enter your credentials to access your account</p>
+            <?php
+                if (isset($_GET['verify'])) {
+                    echo '<div class="alert alert-warning" role="alert">check your email to verify ur email please</div>';
+                }
+            ?>
             <form name="form" action="" class="form1" onsubmit = "return validation()" method = "POST">
             <?php echo $accountNotExistErr; ?>
                     <?php echo $emailPwdErr; ?>
