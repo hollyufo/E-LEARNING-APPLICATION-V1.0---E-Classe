@@ -29,12 +29,12 @@ if(isset($_POST["reset"])){
 
                 try {
                     //Server settings
-                    $mail->SMTPDebug = 0;                      //Enable verbose debug output
+                    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
                     $mail->isSMTP();                                            //Send using SMTP
-                    $mail->Host       = '';                     //Set the SMTP server to send through
+                    $mail->Host       = 'smtp.hostinger.com';                     //Set the SMTP server to send through
                     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                    $mail->Username   = '';                     //SMTP username
-                    $mail->Password   = '';                               //SMTP password
+                    $mail->Username   = 'contact@imranechaibi.com';                     //SMTP username
+                    $mail->Password   = 'hola1234HOLA@#';                               //SMTP password
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
                     
