@@ -5,7 +5,7 @@ const form = document.getElementById('addd')
 const enrollnum = document.getElementById('enrollnum');
 const date = document.getElementById('date')
 const errorElement = document.getElementById('error')
-
+// checking data for all inputs if it exist
 form.addEventListener('submit', (e) => {
   let messages = []
   if (fname.value === '' || fname.value == null) {
